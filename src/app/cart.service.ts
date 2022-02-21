@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from './products';
+import { Component } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,6 @@ export class CartService {
     this.items = [];
     return this.items;
   }
-  
-  constructor() { }
+
+  constructor(private cartService: CartService) { }
 }
